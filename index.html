@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur d'IMC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="calculator">
+<h1> Calculateur de dépense caloriques journalière </h1>
+<label>Sexe: </label>
+        <input type="radio" name="gender" value="male" checked> Homme
+        <input type="radio" name="gender" value="female"> Femme <br>
+        <label for="weight">Age (ans): </label>
+        <input type="text" id="year" placeholder="Entrez l'âge en année"> <br>
+        <label for="weight">Poids (kg): </label>
+        <input type="text" id="weight" placeholder="Entrez le poids en kg"> <br>
+
+        <label for="height">Taille (cm): </label>
+        <input type="text" id="height" placeholder="Entrez la taille en cm"> <br>
+	<br>
+	<p> La somme des temps en dessous doit faire 24h et doit représenter une journée moyenne : </p>
+        <label for="NAP1">temps allongé : </label>
+        <input type="text" id="NAP1" placeholder="sommeil, sieste et repos"> <br>
+        <label for="NAP2">temps assis : </label>
+        <input type="text" id="NAP2" placeholder="repos, bureau, lecture, ordinateur, voiture..."> <br>
+        <label for="NAP3">temps debout : </label>
+        <input type="text" id="NAP3" placeholder="travail ménager, cuisine, activités professionnelles..."> <br>
+        <label for="NAP4">activite moderée : </label>
+        <input type="text" id="NAP4" placeholder="marche, jardinage, yoga"> <br>
+        <label for="NAP5">activite intense : </label>
+        <input type="text" id="NAP5" placeholder="marche rapide, mecanique..."> <br>
+        <label for="NAP6">activite très intense : </label>
+        <input type="text" id="NAP6" placeholder="terrassiers, bûcherons..."> <br>
+
+        <button onclick="calculate()">Calculer les grandeurs importantes</button>
+
+        <p id="resultimc">Votre IMC est : <span id="imcValue"></span></p>
+        <p id="resultmb">Votre MB (métabolisme de base en kcal) est : <span id="mbValue"></span></p>
+        <p id="resultnap">Votre NAP (niveau d'activité physique) est : <span id="napValue"></span></p>
+        <p id="resultcal">Votre dépense calorique quotidienne (en kcal) est : <span id="calValue"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
