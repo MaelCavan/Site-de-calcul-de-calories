@@ -96,7 +96,148 @@ function calculate() {
     document.getElementById("lipideValuemax").innerText = lipidemax.toFixed(0);
     var resultElementlipidemax = document.getElementById("resultlipide");
     resultElementlipidemax.style.display = "block";
+
     document.getElementById("lipideValuemin").innerText = lipidemin.toFixed(0);
     var resultElementlipidemin = document.getElementById("resultlipide");
     resultElementlipidemin.style.display = "block";
+
+
+    var glucide=glucidemax
+    var lipide=lipidemin
+    var proteine=protmax
+
+    var fruitglucide=12
+    var glucidegoute=1.5*fruitglucide
+    var k=2
+    if (cal<2000){ 
+	k=1 
+    } else { 
+	k=2 
+    }
+    var glucideptitdej=35*k
+    var lipideptitdej=20*k
+    var proteineptitdej=10*k
+
+    glucide=glucide-glucidegoute-glucideptitdej
+    lipide=lipide-lipideptitdej
+    proteine=proteine-proteineptitdej
+
+    var alpha=glucide/50
+
+    var Qlegumineuse=alpha*50
+    var Qcereal=alpha*50
+
+    var lipiderepas=0.75*alpha
+    var proteinerepas=6.5*alpha
+
+    lipide=(lipide-2*lipiderepas)
+    proteine=proteine-2*proteinerepas
+    
+    var huilelipide=13
+
+    var Qhuile=lipide/2/huilelipide
+    var Qlevure=0
+    if (proteine>0){
+    Qlevure=proteine/8
+    } else {
+    Qlevure=0
+    }
+   var Qlait=k*200
+   var Qavoine=k/2
+   var Qfruit=k*50
+   var Qcacahuette=k*20
+	
+   document.getElementById("Qlait").innerText = Qlait.toFixed(0);
+    var resultElementlait = document.getElementById("repas");
+    resultElementlait.style.display = "block";
+	
+   document.getElementById("Qavoine").innerText = Qavoine.toFixed(0);
+    var resultElementavoine = document.getElementById("repas");
+    resultElementavoine.style.display = "block";
+	
+   document.getElementById("Qfruit").innerText = Qfruit.toFixed(0);
+    var resultElementfruit = document.getElementById("repas");
+    resultElementfruit.style.display = "block";
+	
+   document.getElementById("Qcacahuette").innerText = Qcacahuette.toFixed(0);
+    var resultElementcacahuette = document.getElementById("repas");
+    resultElementcacahuette.style.display = "block";
+
+
+   document.getElementById("Qlegumineuse").innerText = Qlegumineuse.toFixed(0);
+    var resultElementlegumineuse = document.getElementById("repas");
+    resultElementlegumineuse.style.display = "block";
+	
+   document.getElementById("Qcereal").innerText = Qcereal.toFixed(0);
+    var resultElementcereal = document.getElementById("repas");
+    resultElementcereal.style.display = "block";
+	
+   document.getElementById("Qlevure").innerText = Qlevure.toFixed(1);
+    var resultElementlevure = document.getElementById("repas");
+    resultElementlevure.style.display = "block";
+	
+   document.getElementById("Qhuile").innerText = Qhuile.toFixed(1);
+    var resultElementhuile = document.getElementById("repas");
+    resultElementhuile.style.display = "block";
+
+
+
+
+
+
+
+
+
+
+
+
+
+    glucide=glucidemax
+    lipide=lipidemin
+    proteine=protmax
+
+    glucide=glucide-glucidegoute
+
+    alpha=glucide/50
+
+    var Qlegumineuse2=alpha*50
+    var Qcereal2=alpha*50
+
+    lipiderepas=0.75*alpha
+    proteinerepas=6.5*alpha
+
+    lipide=(lipide-2*lipiderepas)
+    proteine=proteine-2*proteinerepas
+    
+    huilelipide=13
+
+    var Qhuile2=lipide/2/huilelipide
+    var Qlevure2=0
+    if (proteine>0){
+    Qlevure2=proteine/8
+    } else {
+    Qlevure2=0
+    }
+	
+
+   document.getElementById("Qlegumineuse2").innerText = Qlegumineuse2.toFixed(0);
+    var resultElementlegumineuse2 = document.getElementById("repas2");
+    resultElementlegumineuse2.style.display = "block";
+	
+   document.getElementById("Qcereal2").innerText = Qcereal2.toFixed(0);
+    var resultElementcereal2 = document.getElementById("repas2");
+    resultElementcereal2.style.display = "block";
+	
+   document.getElementById("Qlevure2").innerText = Qlevure2.toFixed(1);
+    var resultElementlevure2 = document.getElementById("repas2");
+    resultElementlevure2.style.display = "block";
+	
+   document.getElementById("Qhuile2").innerText = Qhuile2.toFixed(1);
+    var resultElementhuile2 = document.getElementById("repas2");
+    resultElementhuile2.style.display = "block";
+
+
+
+
+
 }

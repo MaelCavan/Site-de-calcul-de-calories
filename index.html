@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur de calories</title>
+    <title>Calculateur de caloriesC</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div class="calculator">
-<h1> Calculateur de dépenses caloriques journalière </h1>
+<h1> Calculateur de dépense caloriques journalière </h1>
 <label>Sexe: </label>
         <input type="radio" name="gender" value="male" checked> Homme
         <input type="radio" name="gender" value="female"> Femme <br>
@@ -36,14 +36,48 @@
         <input type="text" id="NAP6" placeholder="Sports, activités professionnelles intenses, travaux, compétitions..."> <br>
         <button onclick="calculate()">Calculer les grandeurs importantes</button>
 
+   <h2> Les caractéristiques </h2>
         <p id="resultimc">Votre IMC est : <span id="imcValue"></span></p>
         <p id="resultmb">Votre MB (métabolisme de base en kcal) est : <span id="mbValue"></span></p>
         <p id="resultnap">Votre NAP (niveau d'activité physique) est : <span id="napValue"></span></p>
         <p id="resultcal">Votre dépense calorique quotidienne (en kcal) est : <span id="calValue"></span></p>
      <br>
+   <h2> Les apports quotidien </h2>
         <p id="resultglucide">Votre besoin en glucide (en g) est entre <span id="glucideValuemin"></span> et <span id="glucideValuemax"></span> </p>
         <p id="resultlipide">Votre besoin en lipide (en g) est entre <span id="lipideValuemin"></span> et <span id="lipideValuemax"></span> </p>
         <p id="resultprot">Votre besoin en proteine (en g) est entre <span id="protValuemin"></span> et <span id="protValuemax"></span> </p>
+     <br>
+	<h2> Exemples de journée type </h2>
+   <h3> avec petit dejeunée </h3>
+     <p id="repas">   # Petit dejeunée - smoothie : <br>
+	- Lait d'amande : <span id="Qlait"></span> mL <br>
+	- Flocon d'avoine : <span id="Qavoine"></span> tasse <br>
+	- fruits rouges congeles : <span id="Qfruit"></span> g <br>
+	- beurre de cacahuette : <span id="Qcacahuette"></span> g <br>
+	- Protéine en poudre pour la prise de masse <br>
+	<br>
+       # chaque repas : <br>
+	- Légumes : 200 à 300 g <br>
+	- Légumineuses : <span id="Qlegumineuse"></span> g <br>
+	- Céréales : <span id="Qcereal"></span> g <br>
+	- Cuillères à soupe de levure de bierre : <span id="Qlevure"></span> ou plus <br>
+	- Cuillères à soupe d'huile : <span id="Qhuile"></span> <br>
+	<br>
+       # Gouter : <br>
+	- Fruit : 1 à 2 protions <br>
+    </p>
+   <h3> sans petit dejeunée </h3>
+     <p id="repas2">
+       # chaque repas : <br>
+	- Légumes : 200 à 300 g <br>
+	- Légumineuses : <span id="Qlegumineuse2"></span> g <br>
+	- Céréales : <span id="Qcereal2"></span> g <br>
+	- Cuillères à soupe de levure de bierre : <span id="Qlevure2"></span> ou plus <br>
+	- Cuillères à soupe d'huile : <span id="Qhuile2"></span> <br>
+	<br>
+       # Gouter : <br>
+	- Fruit : 1 à 2 protions <br>
+    </p>
     </div>
 
     <script src="script.js"></script>
